@@ -15,6 +15,7 @@ void setup() {
 }
 
 void loop() {
+  // 送られてきた文字列を文字数分だけ実行する。
   if (Serial.available() ) {
     char key = Serial.read();
     // 始動は20%以上で15ミリ秒以上必要

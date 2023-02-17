@@ -50,29 +50,22 @@ size_t bytes_written;
 
 void setup()
 {
-    M5.begin(true, false, true);
-    InitI2SSpaker();
-    Serial.begin(115200);
-    
+  M5.begin(true, false, true);
+  InitI2SSpaker();
+  Serial.begin(115200);
 }
 
 char key;
-    
-void loop()
-{  
+void loop(){  
   if(Serial.available()){
     key=Serial.read();
     Serial.write(key);
     if(key=='0'){
-      i2s_write(SPAKER_I2S_NUMBER, boot, 32044, &bytes_written, portMAX_DELAY);
-    }else if(key=='1'){
       i2s_write(SPAKER_I2S_NUMBER, gun, 103372, &bytes_written, portMAX_DELAY);
-    }else if(key=='2'){
-      i2s_write(SPAKER_I2S_NUMBER, fanfare, 364808, &bytes_written, portMAX_DELAY);
     }
-  }
-  if (M5.Btn.isPressed()){
-    i2s_write(SPAKER_I2S_NUMBER, gun, 103372, &bytes_written, portMAX_DELAY);
+    if (M5.Btn.isPressed()){
+      i2s_write(SPAKER_I2S_NUMBER, gun, 103372, &bytes_written, portMAX_DELAY);
+    }
   }
 }
 

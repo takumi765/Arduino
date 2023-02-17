@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <M5Atom.h> //Atomのヘッダファイルを準備
 //FastLED（CRGB構造体）設定
 CRGB dispColor(uint8_t r, uint8_t g, uint8_t b) {

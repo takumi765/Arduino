@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../../GitHub/Arduino/airpress"
+		},
+		{
+			"name": "potentiometer",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

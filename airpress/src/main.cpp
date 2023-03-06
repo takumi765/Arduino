@@ -31,13 +31,14 @@ void loop()
   // Air press
   if (scale.is_ready()) {
     long data = scale.get_units();
+    Serial.println(data);
     //sprintf(data, "%d", reading1);
-    if(data<2000){
+    /* if(data<2000){
       Serial.println(0);    //0で割り算できないのを防ぐ
     }
     else{
       Serial.println(1);
-    }
+    } */
   } 
   //Serial.println("");
   
